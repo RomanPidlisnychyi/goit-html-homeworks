@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.list {
+    list-style: none;
+}
+
+.wrapper {
+    height: 540px;
+    margin: 0 auto;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    margin-bottom: 70px;
+}
+
+.sing_up-link {
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 11px 22px;
+    transition: border-color 1s;
+}
+
+.sing_up-link:hover {
+    border-color: #ffffff;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.logo .link {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.about {
+    display: inline-block;
+    width: 220px;
+    padding: 20px 0 25px;
+    text-align: center;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.link_wrap {
+    text-transform: none;
+}
+
+.main_link {
+    border: 2px solid #ff4e50;
+    color: #ff4e50;
+    padding: 15px 50px;
+    border-radius: 35px;
+    transition: color 1s, background-color 1s;
+}
+
+.main_link:hover {
+    background-color: #ff4e50;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.cards-list {
+    margin: 0 auto 45px;
+}
+
+.photo {
+    position: relative;
+    margin: 0 auto;
+    width: 121px;
+    height: 121px;
+    margin-bottom: 20px;
+}
+
+.photo a {
+    display: block;
+}
+
+.team-cards [class*="col-"]:nth-child(1) .photo::after {
+    background-image: url(../img/Shape_1.png);
+    background-color: #ff4e50;
+}
+
+.team-cards [class*="col-"]:nth-child(2) .photo::after {
+    background-image: url(../img/Shape_2.png);
+    background-color: #ffa507;
+}
+
+.team-cards [class*="col-"]:nth-child(3) .photo::after {
+    background-image: url(../img/Shape_3.png);
+    background-color: #1cd7ad;
+}
+
+.team-cards [class*="col-"]:nth-child(4) .photo::after {
+    background-image: url(../img/Shape_4.png);
+    background-color: #4e73db;
+}
+
+.photo::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    margin: -4px;
+}
+
+.subtitle {
+    color: #333333;
+}
+
+.text {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #666666;
+    padding-top: 15px;
+}
+
+.footer {
+    margin-bottom: 70px;
+}
+
+@media (max-width: 747px) {
+    .wrapper {
+        min-width: 320px;
+    }
+    .header {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+    .login_in {
+        margin-bottom: 115px;
+    }
+    h2 {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .team-cards [class*="col-"]:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .main {
+        margin: 0 auto;
+        width: 320px;
+    }
+    h3 {
+        display: inline-block;
+        width: 280px;
+    }
+    .footer .main_link {
+        padding: 15px 73px;
+    }
+}
+
+@media (min-width: 748px) and (max-width: 941px) {
+    .team-cards [class*="col-"]:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 748px) {
+    .wrapper {
+        height: 700px;
+        background-image: url(../img/bg2.jpg);
+    }
+    .header {
+        padding-top: 35px;
+        margin-bottom: 140px;
+    }
+    h2 {
+        font-size: 52px;
+    }
+    .about {
+        font-size: 24px;
+    }
+    .main_link {
+        padding: 15px 22px;
+    }
+    .cards-list {
+        padding-top: 35px;
+        margin-bottom: 55px;
+    }
+    .footer {
+        margin-bottom: 55px;
+    }
+}
+
+@media (min-width: 942px) {
+    .wrapper {
+        background-image: url(../img/bg3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}

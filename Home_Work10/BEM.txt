@@ -1,0 +1,39 @@
+header
+
+logo
+    logo__link
+    logo__img
+
+nav
+    nav__item
+    nav__link
+
+service
+    service__about
+    service__title
+    service__list
+    service__item
+    service__item-name
+    service__item-content
+
+team
+    team__about
+    team__title
+    team__content
+    team__list
+    team__item
+    team__bg-photo
+    team__photo
+    team__photo-img
+    team__name
+    team__profession
+    social
+    social__item
+    social__link
+    social__img
+
+footer
+    footer__info
+    footer__link
+    subscribe
+
