@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    @extend %content-width;
+    padding-top: 25px;
+    margin-bottom: 55px;
+}
+
+.burger {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover {
+        cursor: pointer;
+        & .top {
+            transform: rotate(45deg);
+            transform-origin: 0;
+        }
+        & .center {
+            opacity: 0;
+        }
+        & .bottom {
+            transform: rotate(-45deg);
+            transform-origin: 0;
+        }
+        & .line {
+            width: 40px;
+        }
+    }
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+}

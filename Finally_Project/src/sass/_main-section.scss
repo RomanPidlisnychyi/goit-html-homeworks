@@ -1,0 +1,80 @@
+.main {
+    @extend %content-width;
+    &__title {
+        @extend %title;
+        margin-bottom: 35px;
+    }
+    &__text {
+        display: block;
+        line-height: 1.5;
+        font-size: 15px;
+        font-weight: 700;
+        &--grey {
+            font-weight: 400;
+            color: #b9b9b9;
+        }
+        &--orange {
+            color: $main-color;
+            margin-bottom: 35px;
+        }
+    }
+    &__button {
+        width: 250px;
+        height: 48px;
+        display: block;
+        margin: 0 auto 35px;
+        background-color: $main-color;
+        border: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto 85px;
+    }
+    &-list {
+        margin: 0 auto 50px;
+        width: min-content;
+    }
+    &-item {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-bottom: 25px;
+        padding-left: 70px;
+        height: 58px;
+        &__text {
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+    }
+}
+
+.icon {
+    fill: $main-color;
+    height: 47px;
+    &-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        min-width: 58px;
+        max-width: 58px;
+        height: 58px;
+        border: 2px solid $main-color;
+        display: flex;
+        align-items: flex-end;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 54px;
+            top: 9px;
+            width: 2px;
+            height: 36px;
+            background-color: #fff;
+        }
+    }
+}

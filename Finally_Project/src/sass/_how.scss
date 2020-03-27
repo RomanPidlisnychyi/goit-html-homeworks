@@ -1,0 +1,52 @@
+.how {
+    @extend %content-width;
+    text-align: center;
+    &__title {
+        @extend %title;
+        margin-bottom: 35px;
+    }
+    &__icon {
+        width: 45px;
+        height: 60px;
+        fill: $main-color;
+    }
+    &-list {
+        margin-bottom: 50px;
+    }
+    &-item {
+        height: 267px;
+        padding: 30px 20px 0;
+        margin-bottom: 15px;
+        box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
+        &:hover {
+            background-color: $main-color;
+            & .how__icon,
+            .how-item__text {
+                fill: #fff;
+                color: #fff;
+            }
+            & .how-item__text--title::after {
+                background-color: #fff;
+            }
+        }
+        &__text {
+            font-size: 11px;
+            font-weight: 400;
+            color: #858585;
+            line-height: 1.8;
+            &--title {
+                font-size: 13px;
+                font-weight: 700;
+                color: black;
+                &::after {
+                    content: "";
+                    display: block;
+                    margin: 20px auto;
+                    width: 25px;
+                    height: 2px;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
