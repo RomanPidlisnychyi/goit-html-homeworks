@@ -39,12 +39,8 @@
                 font-weight: 700;
                 color: black;
                 &::after {
-                    content: "";
-                    display: block;
+                    @extend %before;
                     margin: 20px auto;
-                    width: 25px;
-                    height: 2px;
-                    background-color: $main-color;
                 }
             }
         }

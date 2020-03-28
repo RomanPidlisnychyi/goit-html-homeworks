@@ -10,3 +10,11 @@ $main-color: #ff6b08;
     font-weight: 800;
     line-height: 1.5;
 }
+
+%before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: $main-color;
+}

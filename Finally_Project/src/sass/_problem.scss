@@ -37,12 +37,8 @@
             padding-bottom: 20px;
         }
         &::before {
-            content: "";
-            display: block;
-            width: 25px;
-            height: 2px;
+            @extend %before;
             margin-bottom: 15px;
-            background-color: $main-color;
         }
         &::after {
             position: absolute;
