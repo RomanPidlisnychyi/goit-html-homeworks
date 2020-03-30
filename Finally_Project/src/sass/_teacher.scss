@@ -1,0 +1,59 @@
+.teacher {
+    @extend %content-width;
+    &__title {
+        @extend %title;
+        margin-bottom: 20px;
+    }
+    &__img {
+        display: block;
+        width: 279px;
+        height: 214px;
+        margin-bottom: 20px;
+    }
+    &__subtitle {
+        @extend %title;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    &-list {
+        position: relative;
+        border-top: 1px solid rgba(133, 133, 133, 0.5);
+        padding-top: 20px;
+        &::after {
+            @extend %before;
+            position: absolute;
+            left: 15px;
+            bottom: -20px;
+        }
+    }
+    &-item {
+        padding-left: 35px;
+        margin-bottom: 25px;
+        background: url(../images/Check.svg) top left/20px 25px no-repeat;
+        &__text {
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+    &__text {
+        padding: 20px 0 0 15px;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #858585;
+        &--last {
+            margin-bottom: 20px;
+        }
+    }
+    &__link {
+        display: block;
+        margin: 0 auto 50px;
+        width: fit-content;
+        font-size: 11px;
+        text-align: center;
+        color: $main-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.program {
+    @extend %content-width;
+    &-wrap {
+        @extend .problem-wrap;
+    }
+    &-bg {
+        @extend .problem-bg;
+        height: 1740px;
+        z-index: -2;
+    }
+    &__title {
+        @extend .problem__title;
+        text-align: center;
+        padding-top: 45px;
+        margin-bottom: 35px;
+    }
+    &-list {
+        width: fit-content;
+        position: relative;
+        margin: 0 auto 15px;
+        counter-reset: section;
+    }
+    &-item {
+        position: relative;
+        padding: 15px 0 20px 30px;
+        border-left: 2px solid #546264;
+        &--last {
+            border-left: 2px solid transparent;
+        }
+        &::before {
+            @extend %before;
+            position: absolute;
+            top: 0;
+            left: -6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        &::after {
+            position: absolute;
+            top: -4px;
+            left: 30px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            counter-increment: section;
+            content: "" counter(section) " Семестр";
+        }
+        &__title {
+            display: flex;
+            align-items: center;
+            color: $main-color;
+            font-size: 13px;
+            padding: 15px 0;
+            &::before {
+                @extend %before;
+                margin-right: 12px;
+            }
+        }
+        &__text {
+            @extend .how-item__text;
+        }
+    }
+    &-photo {
+        display: block;
+        width: 143px;
+        height: 170px;
+        &-wrap {
+            position: absolute;
+            top: 45px;
+            left: 90px;
+            z-index: -1;
+            &::after {
+                @extend %before;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}

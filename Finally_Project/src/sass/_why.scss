@@ -1,0 +1,19 @@
+.why {
+    @extend %content-width;
+    &__title {
+        @extend .problem__title;
+        margin-bottom: 20px;
+    }
+    &-list {
+        @extend .problem-list;
+    }
+    &-item {
+        @extend .problem-item;
+        &--last {
+            @extend .problem-item--last;
+        }
+        &__text {
+            @extend .problem-item__text;
+        }
+    }
+}

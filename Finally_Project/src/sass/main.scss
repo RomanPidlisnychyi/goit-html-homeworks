@@ -9,89 +9,50 @@
 @import '_main-section';
 @import '_problem';
 @import '_how';
+@import '_program';
+@import '_why';
+@import '_teacher';
 .container {
     min-width: 320px;
 }
 
-.program {
+.guarantee {
     @extend %content-width;
-    &-wrap {
-        @extend .problem-wrap;
-    }
-    &-bg {
-        @extend .problem-bg;
-        height: 1570px;
-    }
     &__title {
-        @extend .problem__title;
+        @extend %title;
+        margin-bottom: 50px;
         text-align: center;
-        padding-top: 45px;
-        margin-bottom: 35px;
-    }
-    &-list {
-        width: fit-content;
-        position: relative;
-        margin: 0 auto;
-        counter-reset: section;
     }
     &-item {
         position: relative;
-        padding: 15px 0 20px 30px;
-        border-left: 2px solid #546264;
-        &--last {
-            border-left: 2px solid transparent;
-        }
+        border-left: 1px dotted rgb(186, 186, 186);
+        padding-left: 28px;
         &::before {
             @extend %before;
             position: absolute;
             top: 0;
-            left: -6px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
+            left: -10px;
+            width: 20px;
+            height: 27px;
+            z-index: 2;
+            background: url(../images/Campfire.svg) no-repeat transparent;
         }
         &::after {
+            @extend %before;
             position: absolute;
-            top: -4px;
-            left: 30px;
-            color: #fff;
-            font-size: 15px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            counter-increment: section;
-            content: "" counter(section) " Семестр";
-        }
-        &__title {
-            display: flex;
-            align-items: center;
-            color: $main-color;
-            font-size: 13px;
-            padding: 15px 0;
-            &::before {
-                @extend %before;
-                margin-right: 12px;
-            }
+            top: 0;
+            left: -1px;
+            width: 2px;
+            height: 5px;
+            background-color: #fff;
+            z-index: 1;
         }
         &__text {
-            @extend .how-item__text;
-        }
-    }
-    &-photo {
-        display: block;
-        width: 143px;
-        height: 170px;
-        &-wrap {
-            position: absolute;
-            top: 45px;
-            left: 90px;
-            &::after {
-                @extend %before;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 20px;
+            &--orange {
+                color: $main-color;
             }
         }
     }
