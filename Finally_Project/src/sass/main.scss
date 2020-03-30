@@ -16,3 +16,49 @@
 .container {
     min-width: 320px;
 }
+
+.reviews {
+    @extend %content-width;
+    text-align: center;
+    &__title {
+        @extend %title;
+        margin-bottom: 40px;
+    }
+    &-card {
+        width: 255px;
+        margin: 0 auto;
+        &__img {
+            display: block;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+        }
+        &__icon {
+            width: 50px;
+            height: 28px;
+            margin-bottom: 20px;
+        }
+        &__title {
+            font-size: 13px;
+            color: $main-color;
+            margin-bottom: 5px;
+        }
+        &__subtitle {
+            @extend %primory-font;
+            line-height: 17px;
+            margin-bottom: 20px;
+        }
+        &__text {
+            @extend %primory-font;
+            color: unset;
+        }
+        &__link {
+            color: $main-color;
+            &:hover {
+                text-decoration: underline;
+                ;
+            }
+        }
+    }
+}
