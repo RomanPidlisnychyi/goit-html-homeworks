@@ -30,14 +30,11 @@
             }
         }
         &__text {
-            font-size: 11px;
-            font-weight: 400;
-            color: #858585;
-            line-height: 1.8;
+            @extend %primory-font;
             &--title {
                 font-size: 13px;
                 font-weight: 700;
-                color: black;
+                color: unset;
                 &::after {
                     @extend %before;
                     margin: 20px auto;

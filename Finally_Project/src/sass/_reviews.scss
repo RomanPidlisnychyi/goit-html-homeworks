@@ -1,0 +1,80 @@
+.reviews {
+    text-align: center;
+    &__title {
+        @extend %title;
+        width: 280px;
+        margin: 0 auto 40px;
+    }
+    &-card {
+        width: 255px;
+        margin: 0 auto 55px;
+        &__img {
+            display: block;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+        }
+        &__icon {
+            width: 50px;
+            height: 28px;
+            margin-bottom: 20px;
+        }
+        &__title {
+            font-size: 13px;
+            color: $main-color;
+            margin-bottom: 5px;
+        }
+        &__subtitle {
+            @extend %primory-font;
+            line-height: 17px;
+            margin-bottom: 20px;
+        }
+        &__text {
+            @extend %primory-font;
+            color: unset;
+        }
+        &__link {
+            color: $main-color;
+            &:hover {
+                text-decoration: underline;
+                ;
+            }
+        }
+    }
+    &-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f1f1f1;
+        padding: 15px 0 55px;
+    }
+    &-item {
+        margin-right: 10px;
+        &--first {
+            padding-right: 15px;
+        }
+        &--last {
+            margin: 0;
+            padding-left: 15px;
+        }
+        &__button {
+            width: 20px;
+            height: 11px;
+            border: none;
+            background-image: url(../images/left_arrow.jpg);
+            &--right {
+                background-image: url(../images/right_arrow.jpg);
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &__img {
+            display: block;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+        }
+    }
+}

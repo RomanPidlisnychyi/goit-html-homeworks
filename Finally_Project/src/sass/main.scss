@@ -13,52 +13,44 @@
 @import '_why';
 @import '_teacher';
 @import '_guarantee';
+@import '_reviews';
 .container {
     min-width: 320px;
 }
 
-.reviews {
-    @extend %content-width;
+.registration {
+    position: relative;
+    height: 540px;
+    color: #fff;
     text-align: center;
-    &__title {
-        @extend %title;
-        margin-bottom: 40px;
+    background: url(../images/registration_bg.JPG) center/cover no-repeat;
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
-    &-card {
-        width: 255px;
-        margin: 0 auto;
-        &__img {
-            display: block;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 15px;
-        }
-        &__icon {
-            width: 50px;
-            height: 28px;
-            margin-bottom: 20px;
-        }
-        &__title {
-            font-size: 13px;
+    &-wrap {
+        position: relative;
+        z-index: 1;
+        @extend %content-width;
+    }
+    &__title {
+        font-size: 14px;
+        line-height: 26px;
+        padding-top: 55px;
+        &--orange {
             color: $main-color;
-            margin-bottom: 5px;
         }
-        &__subtitle {
-            @extend %primory-font;
-            line-height: 17px;
-            margin-bottom: 20px;
-        }
-        &__text {
-            @extend %primory-font;
-            color: unset;
-        }
-        &__link {
+    }
+    &__subtitle {
+        @extend %primory-font;
+        color: #fff;
+        &--orange {
             color: $main-color;
-            &:hover {
-                text-decoration: underline;
-                ;
-            }
         }
     }
 }
