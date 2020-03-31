@@ -4,11 +4,20 @@
         @extend %title;
         margin-bottom: 20px;
     }
+    &-wrap {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+        &-content {}
+    }
     &__img {
         display: block;
         width: 279px;
         height: 214px;
         margin-bottom: 20px;
+        @media (min-width: 768px) {
+            margin-right: 44px;
+        }
     }
     &__subtitle {
         @extend %title;
@@ -16,15 +25,8 @@
         margin-bottom: 5px;
     }
     &-list {
-        position: relative;
         border-top: 1px solid rgba(133, 133, 133, 0.5);
         padding-top: 20px;
-        &::after {
-            @extend %before;
-            position: absolute;
-            left: 15px;
-            bottom: -20px;
-        }
     }
     &-item {
         padding-left: 35px;
@@ -37,9 +39,16 @@
     }
     &__text {
         @extend %primory-font;
-        padding: 20px 0 0 15px;
-        &--last {
-            margin-bottom: 20px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+        @media (min-width: 768px) {
+            padding-left: 0;
+        }
+        &--first {
+            &::before {
+                @extend %before;
+                margin-bottom: 20px;
+            }
         }
     }
     &__link {
@@ -49,6 +58,9 @@
         font-size: 11px;
         text-align: center;
         color: $main-color;
+        @media (min-width: 768px) {
+            display: inline-block;
+        }
         &:hover {
             text-decoration: underline;
         }

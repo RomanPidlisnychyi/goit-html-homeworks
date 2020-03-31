@@ -1,24 +1,30 @@
 .problem {
     @extend %content-width;
     padding-top: 50px;
+    @media (min-width: 768px) {
+        padding-top: 60px;
+    }
     &-wrap {
         position: relative;
     }
     &-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #111517;
+        @extend %bg;
         height: 500px;
         z-index: -1;
+        @media (min-width: 768px) {
+            height: 332px;
+            background: url(../images/Campfire1.svg) right -50px bottom -80px no-repeat #111517;
+        }
     }
     &__title {
         @extend %title;
         color: #fff;
         letter-spacing: 1.2px;
+        width: 240px;
+        @media (min-width: 768px) {
+            width: 390px;
+        }
         &--orange {
-            display: inline-block;
             color: $main-color;
         }
     }
@@ -29,10 +35,22 @@
         padding: 0 38px;
         margin: 10px auto 55px;
         box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 15px;
+        }
     }
     &-item {
         padding-top: 20px;
         position: relative;
+        @media (min-width: 768px) {
+            width: 230px;
+            &:nth-child(odd) {
+                margin-right: 70px;
+            }
+        }
         &--last {
             padding-bottom: 20px;
         }

@@ -4,15 +4,44 @@
         @extend .problem-wrap;
     }
     &-bg {
-        @extend .problem-bg;
+        @extend %bg;
         height: 1740px;
         z-index: -2;
+        @media (min-width: 768px) {
+            height: 1040px;
+        }
+        &-photo {
+            position: absolute;
+            width: 143px;
+            height: 170px;
+            background: url(../images/program_photo2.jpg) left/cover;
+            top: 1300px;
+            right: 0;
+            z-index: -1;
+            @media (min-width: 768px) {
+                width: 405px;
+                height: 280px;
+                top: 680px;
+                right: 0;
+            }
+            &::after {
+                @extend %before;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
     }
     &__title {
         @extend .problem__title;
         text-align: center;
         padding-top: 45px;
         margin-bottom: 35px;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
     &-list {
         width: fit-content;
@@ -24,6 +53,15 @@
         position: relative;
         padding: 15px 0 20px 30px;
         border-left: 2px solid #546264;
+        @media (min-width: 768px) {
+            display: flex;
+        }
+        &-wrap {
+            @media (min-width: 768px) {
+                width: 155px;
+                margin-right: 25px;
+            }
+        }
         &--last {
             border-left: 2px solid transparent;
         }
@@ -63,23 +101,29 @@
             @extend .how-item__text;
         }
     }
-    &-photo {
-        display: block;
-        width: 143px;
-        height: 170px;
-        &-wrap {
-            position: absolute;
-            top: 45px;
-            left: 90px;
-            z-index: -1;
-            &::after {
-                @extend %before;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-        }
-    }
+    // &-photo {
+    //     &-wrap {
+    //         position: absolute;
+    //         width: 143px;
+    //         height: 170px;
+    //         background: url(../images/program_photo2.jpg) left/cover;
+    //         top: 45px;
+    //         left: 90px;
+    //         z-index: -1;
+    //         @media (min-width: 768px) {
+    //             width: 405px;
+    //             height: 280px;
+    //             top: -45px;
+    //             left: 210px;
+    //         }
+    //         &::after {
+    //             @extend %before;
+    //             position: absolute;
+    //             top: 0;
+    //             width: 100%;
+    //             height: 100%;
+    //             background-color: rgba(0, 0, 0, 0.5);
+    //         }
+    //     }
+    // }
 }

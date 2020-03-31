@@ -14,43 +14,8 @@
 @import '_teacher';
 @import '_guarantee';
 @import '_reviews';
+@import '_registration';
+@import '_footer';
 .container {
     min-width: 320px;
-}
-
-.registration {
-    position: relative;
-    height: 540px;
-    color: #fff;
-    text-align: center;
-    background: url(../images/registration_bg.JPG) center/cover no-repeat;
-    &::before {
-        content: "";
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-    &-wrap {
-        position: relative;
-        z-index: 1;
-        @extend %content-width;
-    }
-    &__title {
-        font-size: 14px;
-        line-height: 26px;
-        padding-top: 55px;
-        &--orange {
-            color: $main-color;
-        }
-    }
-    &__subtitle {
-        @extend %primory-font;
-        color: #fff;
-        &--orange {
-            color: $main-color;
-        }
-    }
 }

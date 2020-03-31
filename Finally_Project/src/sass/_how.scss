@@ -12,12 +12,25 @@
     }
     &-list {
         margin-bottom: 50px;
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
     }
     &-item {
         height: 267px;
         padding: 30px 20px 0;
         margin-bottom: 15px;
         box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
+        @media (min-width: 768px) {
+            width: 290px;
+            margin-bottom: 20px;
+            &:nth-child(odd) {
+                margin-right: 20px;
+            }
+        }
         &:hover {
             background-color: $main-color;
             & .how__icon,

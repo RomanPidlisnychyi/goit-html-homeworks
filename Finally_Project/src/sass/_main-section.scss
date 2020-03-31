@@ -1,8 +1,22 @@
 .main {
     @extend %content-width;
+    &-wrap {
+        margin-bottom: 115px;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: flex-start;
+        }
+        &-content {
+            @media (max-width: 767px) {
+                margin-bottom: 35px;
+            }
+        }
+    }
     &__title {
         @extend %title;
-        margin-bottom: 35px;
+        @media (min-width: 768px) {
+            margin-bottom: 35px;
+        }
     }
     &__text {
         display: block;
@@ -19,27 +33,36 @@
         }
     }
     &__button {
-        width: 250px;
-        height: 48px;
-        display: block;
-        margin: 0 auto 35px;
+        @extend %button;
+        margin: 0 auto;
         background-color: $main-color;
-        border: none;
-        text-transform: uppercase;
+        border: 1px solid transparent;
         color: #fff;
-        font-size: 11px;
-        font-weight: 700;
+        &:hover {
+            border-color: grey;
+        }
+        @media (min-width: 768px) {
+            display: inline-block;
+        }
     }
     &__img {
         display: block;
-        margin: 0 auto 85px;
+        margin: 0 auto;
     }
     &-list {
-        margin: 0 auto 50px;
-        width: min-content;
+        @extend %content-width;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
     }
     &-item {
         display: flex;
+        width: 200px;
         position: relative;
         align-items: center;
         margin-bottom: 25px;
@@ -70,9 +93,9 @@
         &::after {
             content: "";
             position: absolute;
-            left: 54px;
+            right: -3px;
             top: 9px;
-            width: 2px;
+            width: 4px;
             height: 36px;
             background-color: #fff;
         }
