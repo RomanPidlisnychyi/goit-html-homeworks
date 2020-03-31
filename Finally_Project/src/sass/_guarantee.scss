@@ -16,6 +16,9 @@
         border-left: 1px dotted rgb(186, 186, 186);
         padding: 0 10px 20px 30px;
         width: 280px;
+        @media (min-width: 768px) {
+            width: 570px;
+        }
         &--last {
             border-left: 1px dotted transparent;
         }

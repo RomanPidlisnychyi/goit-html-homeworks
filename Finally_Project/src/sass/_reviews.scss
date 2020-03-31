@@ -1,13 +1,34 @@
 .reviews {
     text-align: center;
+    position: relative;
     &__title {
         @extend %title;
         width: 280px;
         margin: 0 auto 40px;
+        @media (min-width: 768px) {
+            width: auto;
+        }
     }
     &-card {
         width: 255px;
         margin: 0 auto 55px;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            width: auto;
+        }
+        &-wrap {
+            @media (min-width: 768px) {
+                padding-top: 15px;
+                margin-right: 43px;
+            }
+        }
+        &-content {
+            @media (min-width: 768px) {
+                width: 465px;
+                text-align: left;
+            }
+        }
         &__img {
             display: block;
             border-radius: 50%;
@@ -24,6 +45,9 @@
             font-size: 13px;
             color: $main-color;
             margin-bottom: 5px;
+            @media (min-width: 768px) {
+                margin-bottom: 20px;
+            }
         }
         &__subtitle {
             @extend %primory-font;
@@ -51,23 +75,18 @@
     }
     &-item {
         margin-right: 10px;
-        &--first {
-            padding-right: 15px;
+        &:last-child() {
+            margin: 0;
         }
         &--last {
-            margin: 0;
-            padding-left: 15px;
-        }
-        &__button {
-            width: 20px;
-            height: 11px;
-            border: none;
-            background-image: url(../images/left_arrow.jpg);
-            &--right {
-                background-image: url(../images/right_arrow.jpg);
+            @media (max-width: 767px) {
+                margin-right: 0;
             }
-            &:hover {
-                cursor: pointer;
+        }
+        &--media {
+            display: none;
+            @media (min-width: 768px) {
+                display: unset;
             }
         }
         &__img {
@@ -75,6 +94,35 @@
             width: 54px;
             height: 54px;
             border-radius: 50%;
+        }
+    }
+    &-arrows {
+        &-list {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 280px;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            @media (min-width: 768px) {
+                width: 725px;
+                bottom: 215px;
+            }
+        }
+        &-item {
+            &__button {
+                width: 20px;
+                height: 11px;
+                border: none;
+                background-image: url(../images/left_arrow.jpg);
+                &--right {
+                    background-image: url(../images/right_arrow.jpg);
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
