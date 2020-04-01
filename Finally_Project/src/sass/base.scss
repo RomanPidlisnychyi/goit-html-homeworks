@@ -19,3 +19,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #111517;
 }
+
+.container {
+    min-width: 320px;
+}
+
+.mark {
+    color: $main-color;
+}

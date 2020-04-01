@@ -7,6 +7,17 @@
     margin-bottom: 55px;
 }
 
+.logo {
+    &__img {
+        width: 79px;
+        height: 31px;
+        @media (min-width: 768px) {
+            width: 126px;
+            height: 46px;
+        }
+    }
+}
+
 .nav {
     @media (min-width: 768px) {
         display: flex;

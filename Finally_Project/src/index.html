@@ -14,7 +14,7 @@
     <div class="container">
         <header class="header">
             <a href="#" class="logo__link">
-                <img src="images/logo.png" alt="Hell EN logo brand" class="logo__img">
+                <img class="logo__img" srcset="images/logo.png 320w, images/logo@768.png 768w" src="images/logo.png" alt="logo brand">
             </a>
             <div class="nav">
                 <button class="nav__button">Консультация по телефону</button>
@@ -28,11 +28,17 @@
         <main class="main">
             <div class="main-wrap">
                 <div class="main-wrap-content">
-                    <h2 class="main__title">Комплексная подготовка к ВНО<span class="main__title">по английскому языку</span></h2>
+                    <h2 class="main__title">Комплексная подготовка к ВНО по английскому языку</h2>
                     <p class="main__text"><span class="main__text main__text--grey">Просто не будет.</span>Но ты гарантировано наберешь<span class="main__text main__text--orange">+25 баллов</span></p>
                     <button class="main__button">Хочу на бесплатное занятие</button>
                 </div>
-                <img src="images/main_img.png" alt="some picture" class="main__img">
+                <div class="main__img">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/main_img.png">
+                        <source media="(min-width: 768px)" srcset="images/main_img@768.jpg">
+                        <img src="images/main_img.png" alt="some picture">
+                    </picture>
+                </div>
             </div>
             <ul class="main-list">
                 <li class="main-item">
@@ -194,8 +200,6 @@
                             <h3 class="program-item__title"></h3>
                             <p class="program-item__text">Revision<br>Tests</p>
                         </div>
-                        <div class="program-photo-wrap">
-                        </div>
                     </li>
                 </ul>
             </section>
@@ -226,7 +230,13 @@
         <section class="teacher">
             <h2 class="teacher__title">Преподаватель</h2>
             <div class="teacher-wrap">
-                <img src="images/teacher_photo.jpg" alt="some photo" class="teacher__img">
+                <div class="teacher__img">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/teacher_photo.jpg">
+                        <source media="(min-width: 768px)" srcset="images/teacher_photo1.jpg">
+                        <img src="images/teacher_photo.jpg" alt="our teacher">
+                    </picture>
+                </div>
                 <div class="teacher-wrap-content">
                     <h3 class="teacher__subtitle">Елена Морева</h3>
                     <ul class="teacher-list">
@@ -314,8 +324,8 @@
         </section>
         <section class="registration">
             <div class="registration-wrap">
-                <h2 class="registration__title">Регистрация на <span class="registration__title--orange">бесплатную</span> телефонную <span class="registration__title--orange">консультацию</span> по нюансам ЗНО по английскому языку</h2>
-                <h3 class="registration__subtitle">Оставь заявку на участие в <span class="registration__subtitle--orange">бесплатном занятии.</span> С вами свяжется консультант и ответит на вопросы.</h3>
+                <h2 class="registration__title">Регистрация на <span class="mark">бесплатную</span> телефонную <span class="mark">консультацию</span> по нюансам ЗНО по английскому языку</h2>
+                <h3 class="registration__subtitle">Оставь заявку на участие в <span class="mark">бесплатном занятии.</span> С вами свяжется консультант и ответит на вопросы.</h3>
                 <form action="" class="registration-form">
                     <input class="registration-form__input" type="text" placeholder="Имя*">
                     <input class="registration-form__input registration-form__input--last" type="text" placeholder="Телефон*">
@@ -332,8 +342,10 @@
                     <a href="#" class="footer__link footer__link--icon">
                     </a>
                 </li>
-                <li class="footer-item footer-item--last">
-                    <a href="#" class="footer__link"><img src="images/logo.png" alt="logo brand" class="footer__img"></a>
+                <li class="footer-item footer-item--logo">
+                    <a href="#" class="footer__link">
+                        <img class="logo__img" srcset="images/logo.png 320w, images/logo@768.png 768w" src="images/logo.png" alt="logo brand">
+                    </a>
                 </li>
             </ul>
             <div class="footer-reserved">

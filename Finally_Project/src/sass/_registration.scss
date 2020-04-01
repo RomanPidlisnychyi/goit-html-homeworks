@@ -5,13 +5,9 @@
     text-align: center;
     background: url(../images/registration_bg.JPG) center/cover no-repeat;
     &::before {
+        @extend %bg;
         content: "";
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
     }
     &-wrap {
         position: relative;
@@ -19,23 +15,36 @@
         @extend %content-width;
     }
     &__title {
-        margin-bottom: 25px;
+        width: 230px;
+        margin: 0 auto 25px;
         font-size: 14px;
         line-height: 26px;
         padding-top: 55px;
-        &--orange {
-            color: $main-color;
+        @media (min-width: 768px) {
+            display: block;
+            font-size: 22px;
+            line-height: 38px;
+            width: 545px;
+            margin-bottom: 35px;
         }
     }
     &__subtitle {
         @extend %primory-font;
         color: #fff;
-        margin-bottom: 25px;
-        &--orange {
-            color: $main-color;
+        margin: 0 auto 25px;
+        @media (min-width: 768px) {
+            display: block;
+            font-size: 15px;
+            text-align: left;
+            width: 460px;
+            margin-bottom: 40px;
         }
     }
     &-form {
+        @media (min-width: 768px) {
+            width: 400px;
+            margin: 0 auto;
+        }
         &__input {
             background-color: transparent;
             width: 280px;
@@ -46,8 +55,14 @@
             font-size: 13px;
             font-weight: 600;
             color: #fff;
+            @media (min-width: 768px) {
+                width: 100%;
+            }
             &--last {
                 margin-bottom: 50px;
+                @media (min-width: 768px) {
+                    margin-bottom: 30px;
+                }
             }
             &::placeholder {
                 color: #fff;

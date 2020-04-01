@@ -101,29 +101,4 @@
             @extend .how-item__text;
         }
     }
-    // &-photo {
-    //     &-wrap {
-    //         position: absolute;
-    //         width: 143px;
-    //         height: 170px;
-    //         background: url(../images/program_photo2.jpg) left/cover;
-    //         top: 45px;
-    //         left: 90px;
-    //         z-index: -1;
-    //         @media (min-width: 768px) {
-    //             width: 405px;
-    //             height: 280px;
-    //             top: -45px;
-    //             left: 210px;
-    //         }
-    //         &::after {
-    //             @extend %before;
-    //             position: absolute;
-    //             top: 0;
-    //             width: 100%;
-    //             height: 100%;
-    //             background-color: rgba(0, 0, 0, 0.5);
-    //         }
-    //     }
-    // }
 }

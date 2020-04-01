@@ -1,22 +1,40 @@
 .footer {
-    text-align: center;
+    // text-align: center;
     &-list {
-        margin: 0 auto;
+        @extend %content-width;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         padding-top: 35px;
-        width: fit-content;
+        margin-bottom: 15px;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: start;
+            padding-top: 40px;
+            margin-bottom: 40px;
+        }
     }
     &-item {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
-        &--last {
-            margin-bottom: 15px;
+        align-items: center;
+        margin: 0 0 20px 0;
+        @media (min-width: 768px) {
+            margin: 0 60px 0 0;
+        }
+        &--logo {
+            margin: 0;
+            @media (min-width: 768px) {
+                order: -1;
+                margin-right: 80px;
+            }
         }
     }
     &__link {
         color: unset;
         font-weight: 600;
         &--tel {
+            padding-top: 5px;
             display: flex;
             &::before {
                 @extend %before;
@@ -38,6 +56,12 @@
         background-color: #111517;
         &__link {
             @extend %primory-font;
+            @extend %content-width;
+            display: block;
+            text-align: center;
+            @media (min-width: 768px) {
+                text-align: left;
+            }
             &:hover {
                 text-decoration: underline;
             }

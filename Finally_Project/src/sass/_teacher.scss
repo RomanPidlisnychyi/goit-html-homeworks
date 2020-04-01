@@ -11,9 +11,6 @@
         &-content {}
     }
     &__img {
-        display: block;
-        width: 279px;
-        height: 214px;
         margin-bottom: 20px;
         @media (min-width: 768px) {
             margin-right: 44px;
@@ -56,7 +53,6 @@
         margin: 0 auto 50px;
         width: fit-content;
         font-size: 11px;
-        text-align: center;
         color: $main-color;
         @media (min-width: 768px) {
             display: inline-block;
