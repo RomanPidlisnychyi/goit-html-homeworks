@@ -3,7 +3,7 @@
     height: 540px;
     color: #fff;
     text-align: center;
-    background: url(../images/registration_bg.JPG) center/cover no-repeat;
+    background: url(../images/registration_bg.jpg) right/cover no-repeat;
     &::before {
         @extend %bg;
         content: "";

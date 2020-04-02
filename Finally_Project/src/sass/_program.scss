@@ -8,19 +8,18 @@
         height: 1740px;
         z-index: -2;
         @media (min-width: 768px) {
-            height: 1040px;
+            height: 1140px;
         }
         &-photo {
             position: absolute;
             width: 143px;
-            height: 170px;
-            background: url(../images/program_photo2.jpg) left/cover;
-            top: 1300px;
+            height: 173px;
+            top: 1297px;
             right: 0;
             z-index: -1;
             @media (min-width: 768px) {
                 width: 405px;
-                height: 280px;
+                height: 259px;
                 top: 680px;
                 right: 0;
             }
@@ -48,6 +47,9 @@
         position: relative;
         margin: 0 auto 15px;
         counter-reset: section;
+        @media (min-width: 768px) {
+            margin-bottom: 145px;
+        }
     }
     &-item {
         position: relative;

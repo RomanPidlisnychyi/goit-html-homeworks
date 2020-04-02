@@ -142,7 +142,13 @@
         </section>
         <div class="program-wrap">
             <div class="program-bg">
-                <div class="program-bg-photo"></div>
+                <div class="program-bg-photo">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/program_photo@320.jpg">
+                        <source media="(min-width: 768px)" srcset="images/program_photo@768.jpg">
+                        <img src="images/program_photo@320.jpg" alt="some picture">
+                    </picture>
+                </div>
             </div>
             <section class="program">
                 <h2 class="program__title">Наша программа</h2>
@@ -205,7 +211,7 @@
             </section>
         </div>
         <section class="why">
-            <h2 class="why__title">Почему нас <br>выбирают</h2>
+            <h2 class="why__title">Почему нас выбирают</h2>
             <ul class="why-list">
                 <li class="why-item">
                     <p class="why-item__text">Обучение в малых командах</p>
@@ -287,7 +293,11 @@
                 <div class="reviews-card-content">
                     <h3 class="reviews-card__title">Тоня Кучеровская</h3>
                     <p class="reviews-card__subtitle">Выпуск 2015-го года, Національний університет біоресурсів і природокористування України</p>
-                    <p class="reviews-card__text">За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці ... <a href="#" class="reviews-card__link">Читать дальше</a></p>
+                    <div class="reviews-card-text-wrap">
+                        <p class="reviews-card-text">За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці. Ми з Оленою стали друзями, тому що її справді хвилювала моя
+                            успішність. Вона стала для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу помилку. Зараз я можу похизуватись тим, що я студент. Зараз я можу похизуватись тим, що я студент</p>
+                        <a href="#" class="reviews-card__link">Читать дальше</a>
+                    </div>
                 </div>
             </div>
             <ul class="reviews-list">
