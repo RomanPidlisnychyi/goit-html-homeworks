@@ -1,5 +1,15 @@
 .main {
     @extend %content-width;
+    &-bg {
+        @extend %bg;
+        background: url(../images/main_bg.jpg) bottom/contain no-repeat transparent;
+        height: 675px;
+        z-index: -1;
+        @media (min-width: 768px) {
+            background-image: url(../images/main_bg@2x.jpg);
+            height: 580px;
+        }
+    }
     &-wrap {
         margin-bottom: 115px;
         @media (min-width: 768px) {
