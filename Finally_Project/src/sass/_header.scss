@@ -23,6 +23,22 @@
         display: flex;
         align-items: center;
     }
+    &-list {
+        display: none;
+        @media (min-width: 1280px) {
+            display: flex;
+        }
+    }
+    &-item {
+        margin-right: 45px;
+        &__link {
+            @include text(12px, 600, 110px, $slave-color);
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
     &__button {
         @extend %button;
         display: none;
@@ -42,6 +58,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (min-width: 1280px) {
+        display: none;
+    }
     &:hover {
         cursor: pointer;
         & .top {

@@ -1,5 +1,6 @@
 $main-color: #ff6b08;
 $primory-color: #858585;
+$slave-color: #b9b9b9;
 %primory-font {
     font-size: 11px;
     font-weight: 500;
@@ -25,6 +26,9 @@ $primory-color: #858585;
     @media (min-width: 768px) {
         width: 688px;
     }
+    @media (min-width: 1280px) {
+        width: 1210px;
+    }
 }
 
 %title {
@@ -49,4 +53,11 @@ $primory-color: #858585;
     right: 0;
     bottom: 0;
     background-color: #111517;
+}
+
+@mixin text ($size, $weight, $height, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    color: $color;
 }
