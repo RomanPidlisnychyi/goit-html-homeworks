@@ -51,9 +51,11 @@
         background: url(../images/Check.svg) top left/20px 25px no-repeat;
         @media (min-width: 1280px) {
             width: 490px;
+            background-size: 30px 35px;
         }
         &__text {
             @extend %list-font;
+            font-weight: 600;
             @media (min-width: 1280px) {
                 font-size: 17px;
             }
@@ -68,7 +70,6 @@
         }
         @media (min-width: 1280px) {
             font-size: 16px;
-            letter-spacing: -0.3px;
         }
         &--first {
             &::before {
@@ -88,6 +89,10 @@
         color: $main-color;
         @media (min-width: 768px) {
             display: inline-block;
+        }
+        @media (min-width: 1280px) {
+            font-size: 16px;
+            margin-bottom: 80px;
         }
         &:hover {
             text-decoration: underline;

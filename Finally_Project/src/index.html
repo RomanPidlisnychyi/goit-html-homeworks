@@ -268,8 +268,8 @@
                     </ul>
                     <p class="teacher__text teacher__text--first">Высшее образование получила в Институте международных отношений НАУ по специальности переводчик - аналитик.</p>
                     <p class="teacher__text">В свободное время проходит курсы от лучших университетов мира по эффективному преподаванию и методикам написания сочинений.</p>
-                    <p class="teacher__text">В числе пройденных: English Grammar and Essay Writing (Berkeley), English Grammar&Style (The University of Queesland), How to Write an Essay (Berkeley), Academic and Business Writing (Berkeley), The Art of Teaching (GEMS education),
-                        Powerful Tools for Teaching and Learning (University of Houston).</p>
+                    <p class="teacher__text">В числе пройденных: English Grammar and Essay Writing (Berke<wbr>ley), English Grammar&Style (The University of Queesland), How to Write an Essay (Berkeley), Academic and Business Writing (Berke<wbr>ley), The Art of Teaching (GEMS
+                        education), Powerful Tools for Teaching and Learning (University of Houston).</p>
                     <a href="#" class="teacher__link">Cambrige English Entry Level Certificate</a>
                 </div>
             </div>
@@ -278,15 +278,15 @@
             <h2 class="guarantee__title">Мы гарантируем</h2>
             <ul class="guarantee-list">
                 <li class="guarantee-item">
-                    <p class="guarantee-item__text">Ты сдашь ВНО минимум на 25 баллов лучше, чем на первом пробном тестировании. Иначе мы вернем деньги.<span class="guarantee-item__text guarantee-item__text--orange">*</span></p>
+                    <p class="guarantee-item__text">Ты сдашь ВНО минимум на 25 баллов лучше, чем на первом пробном тестировании. Иначе мы вернем деньги.<span class="mark">*</span></p>
                 </li>
                 <li class="guarantee-item">
-                    <p class="guarantee-item__text">Ты научишься писать сочинения минимум на 10 баллов из 14. <span class="guarantee-item__text guarantee-item__text--orange">В то время как 20% учеников получили за сочинение 0</span>.</p>
+                    <p class="guarantee-item__text">Ты научишься писать сочинения минимум на 10 баллов из 14. <span class="mark">В то время как 20% учеников получили за сочинение 0</span>.</p>
                 </li>
                 <li class="guarantee-item">
                     <p class="guarantee-item__text">Ты будешь заниматься в своем районе. Мы выберем место проведения занятий после формирования команд.</p>
                 </li>
-                <li class="guarantee-item guarantee-item--last">
+                <li class="guarantee-item">
                     <p class="guarantee-item__text">Команды будут сформированы, исходя из начального уровня учеников. Мы учитываем особенности каждого ученика.</p>
                 </li>
             </ul>
@@ -295,18 +295,21 @@
             <h2 class="reviews__title">Отзывы наших выпускников</h2>
             <div class="reviews-card">
                 <div class="reviews-card-wrap">
-                    <img src="images/card_photo1.jpg" alt="some photo" class="reviews-card__img">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/card_photo1.jpg">
+                        <source media="(min-width: 1280px)" srcset="images/card_photo1@1280.jpg">
+                        <img class="reviews-card__img" src="images/card_photo1.jpg" alt="our teacher">
+                    </picture>
                     <svg class="reviews-card__icon">
                         <use href="images/sprite.svg#icon-vk"></use>
                     </svg>
                 </div>
                 <div class="reviews-card-content">
                     <h3 class="reviews-card__title">Тоня Кучеровская</h3>
-                    <p class="reviews-card__subtitle">Выпуск 2015-го года, Національний університет біоресурсів і природокористування України</p>
+                    <p class="reviews-card__subtitle">Выпуск 2015-го года, Національний університет біоресурсів <br>і природокористування України</p>
                     <div class="reviews-card-text-wrap">
                         <p class="reviews-card-text">За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці. Ми з Оленою стали друзями, тому що її справді хвилювала моя
-                            успішність. Вона стала для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу помилку. Зараз я можу похизуватись тим, що я студент. Зараз я можу похизуватись тим, що я студент</p>
-                        <a href="#" class="reviews-card__link">Читать дальше</a>
+                            успішність. Вона стала для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу помилку. Зараз я можу похизуватись тим, що я студент. Зараз я можу похизуватись тим, що я студент<a href="#" class="reviews-card__link">Читать дальше</a></p>
                     </div>
                 </div>
             </div>
@@ -345,7 +348,7 @@
         <section class="registration">
             <div class="registration-wrap">
                 <h2 class="registration__title">Регистрация на <span class="mark">бесплатную</span> телефонную <span class="mark">консультацию</span> по нюансам ЗНО по английскому языку</h2>
-                <h3 class="registration__subtitle">Оставь заявку на участие в <span class="mark">бесплатном занятии.</span> С вами свяжется консультант и ответит на вопросы.</h3>
+                <h3 class="registration__subtitle">Оставь заявку на участие в <span class="mark">бесплатном занятии.</span> <span class="registration__subtitle--second"></span>С вами свяжется консультант и ответит на вопросы.</h3>
                 <form action="" class="registration-form">
                     <input class="registration-form__input" type="text" placeholder="Имя*">
                     <input class="registration-form__input registration-form__input--last" type="text" placeholder="Телефон*">

@@ -46,6 +46,19 @@
             height: 340px;
             padding: 25px 32px 0;
         }
+        &:hover {
+            background-color: $main-color;
+            cursor: pointer;
+            & .how__icon,
+            .how-item__text,
+            .how-item__title {
+                fill: #fff;
+                color: #fff;
+            }
+            & .how-item__title::after {
+                background-color: #fff;
+            }
+        }
         &__title {
             @extend %list-font;
             color: unset;
@@ -56,18 +69,6 @@
         }
         &__text {
             @extend %primory-font;
-        }
-    }
-    &:hover {
-        background-color: $main-color;
-        cursor: pointer;
-        & .how__icon,
-        .how-item__text {
-            fill: #fff;
-            color: #fff;
-        }
-        & .how-item__text--title::after {
-            background-color: #fff;
         }
     }
 }

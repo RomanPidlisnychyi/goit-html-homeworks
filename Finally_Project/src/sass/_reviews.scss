@@ -9,6 +9,9 @@
         @media (min-width: 768px) {
             width: auto;
         }
+        @media (min-width: 1280px) {
+            margin-bottom: 75px;
+        }
     }
     &-card {
         width: 255px;
@@ -18,10 +21,16 @@
             justify-content: center;
             width: auto;
         }
+        @media (min-width: 1280px) {
+            margin-bottom: 75px;
+        }
         &-wrap {
             @media (min-width: 768px) {
                 padding-top: 15px;
                 margin-right: 43px;
+            }
+            @media (min-width: 1280px) {
+                margin-right: 33px;
             }
         }
         &-content {
@@ -33,13 +42,21 @@
                 width: 435px;
                 text-align: left;
             }
+            @media (min-width: 1280px) {
+                width: 705px;
+            }
         }
         &__img {
             display: block;
             border-radius: 50%;
             width: 80px;
             height: 80px;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
+            @media (min-width: 1280px) {
+                width: 145px;
+                height: 145px;
+                margin-bottom: 25px;
+            }
         }
         &__icon {
             width: 50px;
@@ -51,7 +68,12 @@
             color: $main-color;
             margin-bottom: 5px;
             @media (min-width: 768px) {
+                font-size: 18px;
                 margin-bottom: 20px;
+            }
+            @media (min-width: 1280px) {
+                font-size: 25px;
+                margin-bottom: 15px;
             }
         }
         &__subtitle {
@@ -59,27 +81,44 @@
             line-height: 17px;
             margin-bottom: 20px;
             @media (min-width: 768px) {
-                font-size: 12.5px;
+                font-size: 12px;
             }
         }
         &-text {
+            position: relative;
             color: #111517;
             font-weight: 600;
+            line-height: 20px;
+            @media (min-width: 1280px) {
+                font-size: 17px;
+                line-height: 29px;
+            }
             &-wrap {
                 position: relative;
                 z-index: 2;
                 height: 120px;
                 @extend %primory-font;
                 overflow: hidden;
+                @media (min-width: 1280px) {
+                    height: 170px;
+                }
             }
         }
         &__link {
             position: absolute;
-            padding: 0 5px;
+            padding: 0 25px 0 5px;
             right: 0;
-            bottom: 0;
+            top: 100px;
             color: $main-color;
             background-color: #fff;
+            @media (min-width: 768px) {
+                padding-right: 70px;
+            }
+            @media (min-width: 1280px) {
+                font-size: 17px;
+                padding-right: 159px;
+                top: 144px;
+            }
             &::before {
                 content: "";
                 display: inline-block;
@@ -100,11 +139,17 @@
         align-items: center;
         background-color: #f1f1f1;
         padding: 15px 0 55px;
+        @media (min-width: 1280px) {
+            padding: 35px 0 100px;
+        }
     }
     &-item {
         position: relative;
         z-index: 2;
         margin-right: 10px;
+        @media (min-width: 1280px) {
+            margin-right: 35px;
+        }
         &:hover .reviews-item__img {
             border-color: $main-color;
         }
@@ -147,13 +192,21 @@
                 width: 725px;
                 bottom: 215px;
             }
+            @media (min-width: 1280px) {
+                width: 1166px;
+                bottom: 380px;
+            }
         }
         &-item {
             &__button {
                 width: 20px;
                 height: 11px;
                 border: none;
-                background-image: url(../images/left_arrow.jpg);
+                background: url(../images/left_arrow.jpg) center/contain no-repeat;
+                @media (min-width: 768px) {
+                    width: 25px;
+                    height: 14px;
+                }
                 &--right {
                     background-image: url(../images/right_arrow.jpg);
                 }
