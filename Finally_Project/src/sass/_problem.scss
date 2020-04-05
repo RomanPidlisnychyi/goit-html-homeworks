@@ -1,9 +1,5 @@
 .problem {
     @extend %content-width;
-    padding-top: 50px;
-    @media (min-width: 768px) {
-        padding-top: 60px;
-    }
     &-wrap {
         position: relative;
     }
@@ -12,17 +8,29 @@
         height: 500px;
         z-index: -1;
         @media (min-width: 768px) {
-            height: 332px;
+            height: 320px;
             background: url(../images/fire_png.png) right bottom no-repeat #111517;
+        }
+        @media (min-width: 1280px) {
+            height: 515px;
         }
     }
     &__title {
         @extend %title;
+        padding-top: 50px;
+        margin-bottom: 20px;
         color: #fff;
         letter-spacing: 1.2px;
         width: 240px;
         @media (min-width: 768px) {
-            width: 390px;
+            width: 455px;
+            padding-top: 60px;
+            margin-bottom: 25px;
+        }
+        @media (min-width: 1280px) {
+            width: 740px;
+            padding-top: 80px;
+            margin-bottom: 55px;
         }
         &--orange {
             color: $main-color;
@@ -33,25 +41,42 @@
         counter-reset: section;
         background-color: #fff;
         padding: 0 38px;
-        margin: 10px auto 55px;
+        margin: 0 auto 55px;
         box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
         @media (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 15px;
+            padding: 15px 0;
+        }
+        @media (min-width: 1280px) {
+            justify-content: space-between;
+            padding: 30px 100px;
+            margin-bottom: 95px;
         }
     }
     &-item {
         padding-top: 20px;
         position: relative;
+        @media (max-width: 767px) {
+            &:last-child {
+                padding-bottom: 20px;
+            }
+        }
         @media (min-width: 768px) {
             width: 230px;
+            padding-bottom: 5px;
+        }
+        @media (min-width: 768px) and (max-width: 1279px) {
             &:nth-child(odd) {
                 margin-right: 70px;
             }
+            &:nth-last-child(-n + 2) {
+                padding-bottom: 20px;
+            }
         }
-        &--last {
+        @media (min-width: 1280px) {
+            width: 280px;
             padding-bottom: 20px;
         }
         &::before {
@@ -67,11 +92,14 @@
             font-weight: 600;
             counter-increment: section;
             content: "0" counter(section) "";
+            @media (min-width: 1280px) {
+                font-size: 21px;
+                top: 9px;
+                font-weight: 500;
+            }
         }
         &__text {
-            font-size: 13px;
-            font-weight: 800;
-            line-height: 1.5;
+            @extend %list-font;
         }
     }
 }

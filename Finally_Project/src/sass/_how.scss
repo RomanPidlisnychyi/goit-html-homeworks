@@ -4,9 +4,13 @@
     &__title {
         @extend %title;
         margin-bottom: 35px;
+        @media (min-width: 1280px) {
+            text-align: left;
+            margin-bottom: 55px;
+        }
     }
     &__icon {
-        width: 45px;
+        width: 50px;
         height: 60px;
         fill: $main-color;
     }
@@ -18,41 +22,52 @@
             justify-content: center;
             margin-bottom: 35px;
         }
+        @media (min-width: 1280px) {
+            justify-content: space-between;
+            margin-bottom: 80px;
+        }
     }
     &-item {
         height: 267px;
-        padding: 30px 20px 0;
+        padding: 25px 25px 0;
         margin-bottom: 15px;
         box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
         @media (min-width: 768px) {
             width: 290px;
             margin-bottom: 20px;
+        }
+        @media (min-width: 768px) and (max-width: 1279px) {
             &:nth-child(odd) {
                 margin-right: 20px;
             }
         }
-        &:hover {
-            background-color: $main-color;
-            & .how__icon,
-            .how-item__text {
-                fill: #fff;
-                color: #fff;
-            }
-            & .how-item__text--title::after {
-                background-color: #fff;
+        @media (min-width: 1280px) {
+            width: 390px;
+            height: 340px;
+            padding: 25px 32px 0;
+        }
+        &__title {
+            @extend %list-font;
+            color: unset;
+            &::after {
+                @extend %before;
+                margin: 15px auto;
             }
         }
         &__text {
             @extend %primory-font;
-            &--title {
-                font-size: 13px;
-                font-weight: 700;
-                color: unset;
-                &::after {
-                    @extend %before;
-                    margin: 20px auto;
-                }
-            }
+        }
+    }
+    &:hover {
+        background-color: $main-color;
+        cursor: pointer;
+        & .how__icon,
+        .how-item__text {
+            fill: #fff;
+            color: #fff;
+        }
+        & .how-item__text--title::after {
+            background-color: #fff;
         }
     }
 }

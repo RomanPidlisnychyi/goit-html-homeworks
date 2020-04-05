@@ -1,5 +1,4 @@
 .program {
-    @extend %content-width;
     &-wrap {
         @extend .problem-wrap;
     }
@@ -10,18 +9,22 @@
         @media (min-width: 768px) {
             height: 1140px;
         }
+        @media (min-width: 1280px) {
+            height: 1260px;
+        }
         &-photo {
             position: absolute;
-            width: 143px;
-            height: 173px;
+            width: fit-content;
             top: 1297px;
             right: 0;
             z-index: -1;
             @media (min-width: 768px) {
-                width: 405px;
-                height: 259px;
                 top: 680px;
                 right: 0;
+            }
+            @media (min-width: 1280px) {
+                top: 600px;
+                left: 0;
             }
             &::after {
                 @extend %before;
@@ -34,12 +37,20 @@
         }
     }
     &__title {
-        @extend .problem__title;
+        @extend %content-width;
+        @extend %title;
+        color: #fff;
+        letter-spacing: 1.2px;
         text-align: center;
         padding-top: 45px;
         margin-bottom: 35px;
         @media (min-width: 768px) {
             text-align: left;
+        }
+        @media (min-width: 1280px) {
+            text-align: left;
+            padding-top: 80px;
+            margin-bottom: 45px;
         }
     }
     &-list {
@@ -50,6 +61,14 @@
         @media (min-width: 768px) {
             margin-bottom: 145px;
         }
+        @media (min-width: 1280px) {
+            display: flex;
+            justify-content: center;
+            width: auto;
+            padding-top: 45px;
+            margin-bottom: 25px;
+            border-top: 2px solid #546264;
+        }
     }
     &-item {
         position: relative;
@@ -58,13 +77,22 @@
         @media (min-width: 768px) {
             display: flex;
         }
+        @media (min-width: 1280px) {
+            display: block;
+            border: none;
+            padding-left: 25px;
+        }
         &-wrap {
             @media (min-width: 768px) {
                 width: 155px;
                 margin-right: 25px;
             }
+            @media (min-width: 1280px) {
+                width: 229px;
+                margin: 0;
+            }
         }
-        &--last {
+        &:last-child {
             border-left: 2px solid transparent;
         }
         &::before {
@@ -75,6 +103,10 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
+            @media (min-width: 1280px) {
+                top: -51px;
+                left: 30px;
+            }
         }
         &::after {
             position: absolute;
@@ -87,6 +119,9 @@
             letter-spacing: 1.2px;
             counter-increment: section;
             content: "" counter(section) " Семестр";
+            @media (min-width: 1280px) {
+                font-size: 19px;
+            }
         }
         &__title {
             display: flex;
@@ -94,13 +129,20 @@
             color: $main-color;
             font-size: 13px;
             padding: 15px 0;
+            @media (min-width: 1280px) {
+                font-size: 18px;
+                padding-top: 40px;
+            }
             &::before {
                 @extend %before;
                 margin-right: 12px;
             }
         }
         &__text {
-            @extend .how-item__text;
+            @extend %primory-font;
+            @media (min-width: 1280px) {
+                font-size: 18px;
+            }
         }
     }
 }

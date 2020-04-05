@@ -9,15 +9,15 @@
             width: unset;
             text-align: center;
         }
+        @media (min-width: 1280px) {
+            margin-bottom: 45px;
+        }
     }
     &-list {
         @extend .problem-list;
     }
     &-item {
         @extend .problem-item;
-        &--last {
-            @extend .problem-item--last;
-        }
         &__text {
             @extend .problem-item__text;
         }

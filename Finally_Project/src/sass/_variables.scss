@@ -6,6 +6,20 @@ $slave-color: #b9b9b9;
     font-weight: 500;
     line-height: 20px;
     color: $primory-color;
+    @media (min-width: 1280px) {
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+%list-font {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 20px;
+    @media (min-width: 1280px) {
+        font-size: 18px;
+        line-height: 29px;
+    }
 }
 
 %button {
@@ -15,6 +29,11 @@ $slave-color: #b9b9b9;
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 700;
+    @media (min-width: 1280px) {
+        width: 300px;
+        height: 68px;
+        font-size: 12px;
+    }
     &:hover {
         cursor: pointer;
     }
@@ -36,6 +55,13 @@ $slave-color: #b9b9b9;
     font-size: 20px;
     font-weight: 800;
     line-height: 30px;
+    @media (min-width: 768px) {
+        font-size: 26px;
+    }
+    @media (min-width: 1280px) {
+        font-size: 42px;
+        line-height: 56px;
+    }
 }
 
 %before {
