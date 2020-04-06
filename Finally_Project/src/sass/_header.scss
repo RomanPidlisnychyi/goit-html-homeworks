@@ -5,6 +5,12 @@
     @extend %content-width;
     padding-top: 25px;
     margin-bottom: 55px;
+    @media (min-width: 1280px) {
+        margin-bottom: 40px;
+    }
+    @media (min-width: 1680px) {
+        margin-bottom: 50px;
+    }
 }
 
 .logo {
@@ -31,9 +37,17 @@
     }
     &-item {
         margin-right: 45px;
+        &:last-child {
+            @media (min-width: 1680px) {
+                margin-right: 55px;
+            }
+        }
         &__link {
-            @include text(12px, 600, 110px, $slave-color);
+            @include text(12px, 600, 68px, $slave-color);
             text-transform: uppercase;
+            @media (min-width: 1680px) {
+                font-size: 14px;
+            }
             &:hover {
                 color: $main-color;
             }
@@ -48,6 +62,9 @@
         border: 2px solid $main-color;
         @media (min-width: 768px) {
             display: block;
+        }
+        @media (min-width: 1280px) {
+            margin: 0;
         }
     }
 }

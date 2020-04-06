@@ -15,6 +15,9 @@
     }
     &-list {
         @extend .problem-list;
+        @media (min-width: 1680px) {
+            margin-bottom: 115px;
+        }
     }
     &-item {
         @extend .problem-item;

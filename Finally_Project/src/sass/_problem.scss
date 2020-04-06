@@ -13,6 +13,12 @@
         }
         @media (min-width: 1280px) {
             height: 515px;
+            background-size: 320px;
+        }
+        @media (min-width: 1680px) {
+            height: 545px;
+            background-size: 380px;
+            background-position: right bottom -75px;
         }
     }
     &__title {
@@ -31,6 +37,11 @@
             width: 740px;
             padding-top: 80px;
             margin-bottom: 55px;
+        }
+        @media (min-width: 1680px) {
+            width: 800px;
+            padding-top: 105px;
+            margin-bottom: 65px;
         }
         &--orange {
             color: $main-color;
@@ -53,6 +64,10 @@
             justify-content: space-between;
             padding: 30px 100px;
             margin-bottom: 95px;
+        }
+        @media (min-width: 1680px) {
+            padding: 50px 100px;
+            margin-bottom: 130px;
         }
     }
     &-item {
@@ -78,6 +93,10 @@
         @media (min-width: 1280px) {
             width: 280px;
             padding-bottom: 20px;
+        }
+        @media (min-width: 1680px) {
+            width: 325px;
+            padding: 25px 0;
         }
         &::before {
             @extend %before;

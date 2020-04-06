@@ -25,6 +25,9 @@
         @media (min-width: 1280px) {
             margin-bottom: 125px;
         }
+        @media (min-width: 1680px) {
+            margin-bottom: 105px;
+        }
         &-content {
             @media (max-width: 767px) {
                 margin-bottom: 35px;
@@ -43,6 +46,11 @@
             font-size: 48px;
             line-height: 58px;
         }
+        @media (min-width: 1680px) {
+            width: 580px;
+            font-size: 58px;
+            line-height: 76px;
+        }
     }
     &__text {
         display: block;
@@ -52,6 +60,10 @@
         @media (min-width: 1280px) {
             font-size: 18px;
             line-height: 26px;
+        }
+        @media (min-width: 1680px) {
+            font-size: 21px;
+            line-height: 33px;
         }
         &--grey {
             font-weight: 400;
@@ -63,6 +75,9 @@
             @media (min-width: 1280px) {
                 display: inline-block;
                 margin-bottom: 65px;
+            }
+            @media (min-width: 1680px) {
+                margin-bottom: 40px;
             }
         }
     }
@@ -80,8 +95,6 @@
         }
     }
     &__img {
-        width: fit-content;
-        height: fit-content;
         @media (max-width: 767px) {
             margin: 0 auto;
         }
@@ -91,10 +104,16 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
         @media (min-width: 768px) {
             flex-direction: row;
             justify-content: space-between;
+        }
+        @media (min-width: 1280px) {
+            margin-bottom: 85px;
+        }
+        @media (min-width: 1680px) {
+            margin-bottom: 125px;
         }
     }
     &-item {
@@ -103,12 +122,20 @@
         align-items: center;
         width: 200px;
         height: 58px;
-        margin-bottom: 25px;
         padding-left: 70px;
+        @media (max-width: 767px) {
+            margin-bottom: 25px;
+            &:last-child {
+                margin: 0;
+            }
+        }
         @media (min-width: 1280px) {
             width: 375px;
             height: 104px;
             padding-left: 85px;
+        }
+        @media (min-width: 1680px) {
+            width: 425px;
         }
         &__text {
             @extend %list-font;

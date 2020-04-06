@@ -9,6 +9,9 @@
         @media (min-width: 1280px) {
             margin-bottom: 55px;
         }
+        @media (min-width: 1680px) {
+            margin-bottom: 65px;
+        }
     }
     &-wrap {
         @media (min-width: 768px) {
@@ -42,7 +45,7 @@
         border-top: 1px solid rgba(133, 133, 133, 0.5);
         padding-top: 20px;
         @media (min-width: 1280px) {
-            padding-top: 40px;
+            padding-top: 35px;
         }
     }
     &-item {
@@ -71,6 +74,9 @@
         @media (min-width: 1280px) {
             font-size: 16px;
         }
+        @media (min-width: 1680px) {
+            margin-bottom: 15px;
+        }
         &--first {
             &::before {
                 @extend %before;
@@ -93,6 +99,9 @@
         @media (min-width: 1280px) {
             font-size: 16px;
             margin-bottom: 80px;
+        }
+        @media (min-width: 1680px) {
+            margin-bottom: 130px;
         }
         &:hover {
             text-decoration: underline;
