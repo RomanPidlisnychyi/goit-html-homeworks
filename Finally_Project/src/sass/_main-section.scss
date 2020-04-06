@@ -97,6 +97,7 @@
     &__img {
         @media (max-width: 767px) {
             margin: 0 auto;
+            width: fit-content;
         }
     }
     &-list {
