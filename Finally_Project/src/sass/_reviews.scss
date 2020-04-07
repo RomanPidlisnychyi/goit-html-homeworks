@@ -13,16 +13,22 @@
         }
     }
     &-card {
-        width: 255px;
-        margin: 0 auto 35px;
+        @extend %content-width;
+        padding: 20px 0 30px 0;
+        margin-bottom: 15px;
+        box-shadow: 4px 6.928px 23.68px 8.32px rgba(29, 29, 27, 0.11);
         @media (min-width: 768px) {
             display: flex;
             justify-content: center;
-            width: auto;
-            margin-bottom: 50px;
+            padding: 45px 0 50px 0;
+            margin-bottom: 20px;
         }
         @media (min-width: 1280px) {
-            margin-bottom: 45px;
+            width: 1065px;
+            margin-bottom: 30px;
+        }
+        @media (min-width: 1680px) {
+            margin-bottom: 40px;
         }
         &-wrap {
             @media (min-width: 768px) {
@@ -137,13 +143,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #f1f1f1;
-        padding: 15px 0 55px;
+        margin-bottom: 55px;
+        @media (min-width: 768px) {
+            margin-bottom: 75px;
+        }
         @media (min-width: 1280px) {
-            padding: 35px 0 100px;
+            margin-bottom: 100px;
         }
         @media (min-width: 1680px) {
-            padding-bottom: 120px;
+            margin-bottom: 120px;
         }
     }
     &-item {
@@ -188,16 +196,16 @@
             display: flex;
             justify-content: space-between;
             width: 280px;
-            bottom: 70px;
+            bottom: 16px;
             left: 50%;
             transform: translateX(-50%);
             @media (min-width: 768px) {
                 width: 725px;
-                bottom: 260px;
+                bottom: 240px;
             }
             @media (min-width: 1280px) {
                 width: 1166px;
-                bottom: 370px;
+                bottom: 270px;
             }
         }
         &-item {
@@ -205,13 +213,13 @@
                 width: 20px;
                 height: 11px;
                 border: none;
-                background: url(../images/left_arrow.jpg) center/contain no-repeat;
+                background: url(../images/left_arrow.png) center/contain no-repeat transparent;
                 @media (min-width: 768px) {
                     width: 25px;
                     height: 14px;
                 }
                 &--right {
-                    background-image: url(../images/right_arrow.jpg);
+                    background-image: url(../images/right_arrow.png);
                 }
                 &:hover {
                     cursor: pointer;

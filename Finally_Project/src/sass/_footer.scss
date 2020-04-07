@@ -40,6 +40,7 @@
     &__link {
         color: unset;
         &--tel {
+            position: relative;
             display: flex;
             align-items: center;
             font-size: 18px;
@@ -59,6 +60,18 @@
                 @media (min-width: 1280px) {
                     width: 32px;
                     height: 32px;
+                }
+            }
+            &::after {
+                @extend %before;
+                display: none;
+                position: absolute;
+                width: 1px;
+                height: 29px;
+                right: -30px;
+                background-color: #e0e0e0;
+                @media (min-width: 768px) {
+                    display: block;
                 }
             }
         }
