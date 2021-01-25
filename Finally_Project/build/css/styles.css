@@ -1366,13 +1366,13 @@ body {
     width: 20px;
     height: 11px;
     border: none;
-    background: url(../images/left_arrow.png) center/contain no-repeat transparent; }
+    background: url(../images/left_arrow.jpg) center/contain no-repeat transparent; }
     @media (min-width: 768px) {
       .reviews-arrows-item__button {
         width: 25px;
         height: 14px; } }
     .reviews-arrows-item__button--right {
-      background-image: url(../images/right_arrow.png); }
+      background-image: url(../images/right_arrow.jpg); }
     .reviews-arrows-item__button:hover {
       cursor: pointer; }
 
